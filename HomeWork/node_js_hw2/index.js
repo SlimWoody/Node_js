@@ -1,24 +1,11 @@
 function firstCharacterUppercase (str) {
-    let chars = str.split('');
-    let firstChar = chars[0].toUpperCase();
-    chars.splice(0, 1, firstChar);
-    let newStr = chars.join('');
-    return console.log(newStr);;
+    if (!str) return ''; 
+    return str[0].toUpperCase() + str.slice(1);
 }
 
 function allUpperCaseCharExceptFist (str) {
-    let chars = str.split('');
-    
-    let newChars = chars.map((char, index) => {
-        if(index === 0){
-            return char.toLowerCase();
-        }else{
-            return char.toUpperCase()
-        }
-    })
-
-    const newStr = newChars.join('');
-    return console.log(newStr);
+    if (!str) return '';
+    return str[0].toLowerCase() + str.slice(1).toUpperCase();
 }
 
 module.exports = {firstCharacterUppercase, allUpperCaseCharExceptFist};

@@ -8,7 +8,7 @@ let countError = 0;
 const server = http.createServer((req, res) => {
     switch (req.url) {
         case '/': //— По URL “/” будет возвращаться страница, на которой есть гиперссылка на вторую страницу по ссылке “/about”
-            countHome++;
+            countHome ++;
             res.writeHead(200, {
                 'Content-Type': 'text/html; charset=utf-8'
 
@@ -29,7 +29,7 @@ const server = http.createServer((req, res) => {
                 'Content-Type': 'text/html; charset=utf-8'
 
             })
-            res.end(`<div><h1>!404! Ошибка: такой страницы нет! 404!</h1><p>Просмотров ${countError} </p></div>`)
+        res.end(`<div><h1>!404! Ошибка: такой страницы нет! 404!</h1><p>Просмотров ${countError} </p></div>`)
             break;
     }
 });
