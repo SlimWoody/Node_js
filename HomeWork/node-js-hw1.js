@@ -1,6 +1,6 @@
 const http = require('http');
 
-const port = '3000';
+const port = 3000;
 let countHome = 0;
 let countAbout = 0;    // — * На каждой странице реализуйте счетчик просмотров. Значение счетчика должно увеличиваться на единицу каждый раз, когда загружается страница.
 let countError = 0;
